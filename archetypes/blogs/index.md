@@ -12,6 +12,9 @@ slug = '{{ $pageSlug }}'
 
 tags = ['tag1', 'tag2', 'tag3']
 summary = ''
+
+external_name = ''
+external_url = ''
 +++
 
 ## Introduction
