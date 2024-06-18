@@ -1,4 +1,4 @@
-baseURL = 'https://odhyp.github.io/hugo-skeleton/'
+baseURL = 'localhost'
 languageCode = 'en-us'
 title = 'Hugo Skeleton'
 
