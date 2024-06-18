@@ -7,14 +7,16 @@ draft = true
 
 title = '{{ $pageTitle }}'
 date = {{ .Date }}
-author = '{{ .Site.Params.author }}'
 slug = '{{ $pageSlug }}'
 
 tags = ['tag1', 'tag2', 'tag3']
 summary = ''
 
-external_name = ''
-external_url = ''
+author = '{{ .Site.Params.author }}'
+authorLink = '{{ .Site.Params.authorLink }}'
+
+externalName = ''
+externalUrl = ''
 +++
 
 ## Introduction
