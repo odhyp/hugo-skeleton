@@ -1,6 +1,18 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://odhyp.github.io/hugo-skeleton/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Hugo Skeleton'
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  author = "Your Name"
+  authorLink = "https://yourwebsite.com/"
+  description = "A boilerplate to create your own Hugo theme!"
+  socialGithub = "https://github.com/name"
+  socialTwitter = "https://twitter.com/name"
+  socialLinkedIn = "https://linkedin.com/in/name"
 
 [[menus.main]]
 name = 'Home'
