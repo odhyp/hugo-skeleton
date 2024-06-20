@@ -50,6 +50,9 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      # Install Pagefind for search functionality
+      - name: Install Pagefind
+        run: npm install -g pagefind
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -61,6 +64,9 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      # Index all content to add search results
+      - name: Run Pagefind
+        run: npx -y pagefind --site public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
