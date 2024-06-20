@@ -1,1 +1,13 @@
 <p>Copyright {{ now.Year }}. All rights reserved.</p>
+
+{{ with .Site.GetPage "page" "index.md" }}
+  {{ with .GitInfo }}
+    <p>Last Modified: {{ .AuthorDate | time.Format ":date_medium" }}</p>
+    <p>Commit Message: {{ .Message }}</p>
+    <p>Author: {{ .AuthorName }}</p>
+  {{ else }}
+    <p>No Git information available.</p>
+  {{ end }}
+{{ else }}
+  <p>Git information could not be retrieved.</p>
+{{ end }}
