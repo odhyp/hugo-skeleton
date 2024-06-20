@@ -2,7 +2,7 @@
 draft = false
 
 title = 'Tags'
-layout = 'list'
+layout = 'tags'
 +++
 
 ## This is tags page
