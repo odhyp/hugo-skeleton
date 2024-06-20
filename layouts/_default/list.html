@@ -1,5 +1,13 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
+
+  {{ with .GitInfo }}
+    <span>{{ .AuthorName }}</span>
+    <span>{{ .Message }}</span>
+  {{ end }}
+
+  <hr>
+
   {{ .Content }}
   {{ range .Pages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>

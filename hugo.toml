@@ -45,3 +45,6 @@ weight = 50
     min = "0.116.0"
 
 enableGitInfo = true
+
+[frontmatter]
+  lastmod = ["git", "date"]
