@@ -4,10 +4,21 @@
 
   <div id="search"></div>
   <script>
-      window.addEventListener('DOMContentLoaded', (event) => {
-          new PagefindUI({ element: "#search", showSubResults: true });
-      });
-  </script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({
+                element: "#search",
+                showSubResults: true,
+                highlight: true,
+                render: (result) => {
+                    return `<div>
+                              <h3>${result.data.title}</h3>
+                              <p>${result.excerpt}</p>
+                              <a href="${result.url}">Read more</a>
+                            </div>`;
+                }
+            });
+        });
+    </script>
 
   {{ range .Pages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
