@@ -6,8 +6,9 @@
 draft = true
 
 title = '{{ $pageTitle }}'
-date = {{ .Date }}
 slug = '{{ $pageSlug }}'
+date = {{ .Date }}
+lastmod = {{ .Date }}
 
 tags = ['tag1', 'tag2', 'tag3']
 summary = ''
