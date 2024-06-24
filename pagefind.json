@@ -1,6 +1,0 @@
-{
-  "index": {
-    "selector": "body",
-    "attributes": ["title"]
-  }
-}
